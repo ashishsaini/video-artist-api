@@ -64,7 +64,8 @@ class Recorder:
         print(">> starting real visit...")
         browser_context_options = {
             'viewport': {'width': self.width, 'height': self.height},
-            'record_video_dir': self.video_dir
+            'record_video_dir': self.video_dir,
+            'record_video_size': {'width': self.width, 'height': self.height}
         }
 
         # Use launch_persistent_context to enable caching
@@ -80,10 +81,10 @@ class Recorder:
         st = time.time()
 
         page = context.new_page()
-        page.set_viewport_size({'width': self.width, 'height': self.height})
+        # page.set_viewport_size({'width': self.width, 'height': self.height})
         # page.wait_for_url("https://cdn.mage.space/generate/b20015da187147b4b219532475fdc3bc.jpg")
 
-        page.goto(self.video_url, wait_until='load')
+        page.goto(self.video_url, wait_until='load', timeout=1000000)
         browser_load_time = time.time() - st
         print("browser load time: ", browser_load_time)
         print("page loaded, sleeping for ", int(self.duration) / 1000)
