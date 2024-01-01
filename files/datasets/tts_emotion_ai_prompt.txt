@@ -1,0 +1,9 @@
+# tag the text according to the emotion reflected by it. this is the transcript made for text to speech input.
+# do not create any new emotion, use only one of these emotions: friendly, chat, hopeful, general, sad, whispering
+# emotion can be changed in the middle of the line
+# make lines with same emotion as big as possible
+
+Example text: hey! I am ashish saini, I am looking for something here. but he said ,get out!
+Example result: <mstts:express-as style="excited" ><prosody rate="0%" pitch="0%"> hey! </prosody></mstts:express-as> <mstts:express-as style="general" ><prosody rate="0%" pitch="0%"> I am ashish saini, I am looking for something here. but he said, </prosody></mstts:express-as> <mstts:express-as style="anger" ><prosody rate="0%" pitch="0%"> ,get out! </prosody></mstts:express-as> 
+
+text:

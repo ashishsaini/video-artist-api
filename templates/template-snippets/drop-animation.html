@@ -1,0 +1,89 @@
+<!-- ##css_start## -->
+<script src="https://cdnjs.cloudflare.com/ajax/libs/animejs/2.0.2/anime.min.js"></script>
+<style>
+    @font-face {
+        font-family: 'Sucrose Bold Two';
+        src: url('https://s3-us-west-2.amazonaws.com/s.cdpn.io/4273/sucrose.woff2') format('woff2');
+    }
+
+    .drop-animation {
+        font-family: 'Sucrose Bold Two';
+        font-weight: 600;
+        font-size: 2.5em;
+    }
+
+    .drop-animation .letter {
+        display: inline-block;
+        line-height: 0.5em;
+    }
+
+    .word-class {
+        display: inline-block;
+        margin-right: 0.2em;
+    }
+</style>
+<!-- ##css_end## -->
+
+<!-- ##html_start## -->
+<section data-background-$$background_type$$="$$background$$" data-background-video-muted
+    data-background-video-loop="loop" data-paused-by-reveal="false" data-autoplay style=" height: 100%; width: 100%;"
+    data-autoanimate data-autoslide="1">
+    <div style="$$background_style$$; width: 110%; height: 110%; top: -5%; left:-5%; position: fixed;  ">
+    </div>
+    <div data-autoslide="1" class="fragment"></div>
+
+    __overlay_elements_html__
+
+    <div data-autoslide="$$slide_duration$$" class="fragment"></div>
+</section>
+<!-- ##html_end## -->
+
+<!-- ##js_start## -->
+<script>
+    drop_animation(is_first_call = true);
+    // these animations will run from second slide
+    Reveal.on('slidechanged', event => {
+        // call after 1 sec, causes problems with other slides
+        setTimeout(drop_animation, 100);
+    });
+
+    function drop_animation(is_first_call = false) {
+
+        // logic to handle first call to function
+        // replace the words to letters, this animation calls inndividual letters for animation
+        if (is_first_call == true) {
+            var looper = document.querySelectorAll('.drop-animation');
+            
+            for (i = 0; i < looper.length; i++) {
+                // divs[i].style.color = "green";
+                // ANimation 1
+                var textWrapper = looper[i];
+                
+                const words = looper[i].innerHTML.trim().split(' ');
+                console.log("Words: ", words);
+                looper[i].innerHTML = ""
+
+                words.forEach(word => {
+                    looper[i].innerHTML += `<div class="word-class"> 
+						${word.replace(/\S/g, "<span class='letter'>$&</span>")}
+					</div>`
+                    console.log("Word : ", word)
+                })
+            }
+        }
+
+        // logic to handle first and all other calls
+        anime.timeline({ loop: false })
+            .add({
+                targets: '.drop-animation .letter',
+                scale: [7, 1],
+                opacity: [0, 1],
+                translateZ: 0,
+                easing: "easeOutExpo",
+                duration: 500,
+                delay: (el, i) => 50 * i
+            });
+
+    }
+</script>
+<!-- ##js_end## -->

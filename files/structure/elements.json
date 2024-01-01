@@ -1,0 +1,55 @@
+{
+    "text": {
+        "type": "heading",
+        "value": "Good Morning!",
+        "position": "center",
+        "size": "30px",
+        "color": "#FFF",
+        "font": "verdana",
+        "style": "",
+        "delay": 0,
+        "duration": "auto"
+    },
+    "background": {
+        "type": "video",
+        "value": "",
+        "keywords": [
+            "black",
+            "sunrise"
+        ],
+        "source": "pexels"
+    },
+    "audio": {
+        "type": "url",
+        "value": "",
+        "volume": 1,
+        "language": "en-BR",
+        "voice_id": "en-GB-Wavenet-F",
+        "speaking_rate": "",
+        "delay": 0,
+        "duration": "auto"
+    },
+    "overlay": {
+        "type": "image",
+        "value": "",
+        "position": "top-left",
+        "size": {
+            "width": "100px",
+            "height": "100px"
+        },
+        "delay": 0,
+        "duration": "auto"
+    },
+    "template": {
+        "value": "drop-animation",
+        "category": "animation"
+    },
+    "background_music": {
+        "value": "",
+        "volume": 1
+    },
+    "duration": {
+        "value": "",
+        "depends_on": "audio"
+    }
+}

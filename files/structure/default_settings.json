@@ -1,0 +1,14 @@
+{
+    "video": {
+        "resolution": {
+            "height": 720,
+            "width": 1280
+        },
+        "fps": 30
+    },
+    "transition": {
+        "delay": 1,
+        "animation": "slide"
+    },
+    "record_video": false
+}

@@ -1,0 +1,76 @@
+{
+    "static": {
+        "$$background$$": {
+            "mapping": "background.value",
+            "default": ""
+        },
+        "$$background_type$$": {
+            "mapping": "background.type",
+            "default": "video"
+        },
+        "$$background_style$$": {
+            "mapping": "background.style",
+            "default": ""
+        },
+        "$$slide_duration$$": {
+            "mapping": "duration.value",
+            "default": 5000
+        }
+    },
+    "dynamic": {
+        "text": {
+            "$$text_value$$": {
+                "mapping": "text.value",
+                "default": ""
+            },
+            "$$text_position$$": {
+                "mapping": "text.position",
+                "default": "centered"
+            },
+            "$$text_style$$": {
+                "mapping": "text.style",
+                "default": ""
+            },
+            "$$text_delay$$": {
+                "mapping": "text.delay",
+                "default": 0
+            }
+        },
+        "image": {
+            "$$image_value$$": {
+                "mapping": "image.value",
+                "default": ""
+            },
+            "$$image_position$$": {
+                "mapping": "image.position",
+                "default": "centered"
+            },
+            "$$image_style$$": {
+                "mapping": "image.style",
+                "default": ""
+            },
+            "$$image_delay$$": {
+                "mapping": "image.delay",
+                "default": 0
+            }
+        },
+        "video": {
+            "$$video_value$$": {
+                "mapping": "video.value",
+                "default": ""
+            },
+            "$$video_position$$": {
+                "mapping": "video.position",
+                "default": "centered"
+            },
+            "$$video_style$$": {
+                "mapping": "video.style",
+                "default": ""
+            },
+            "$$video_delay$$": {
+                "mapping": "video.delay",
+                "default": 0
+            }
+        }
+    }
+}

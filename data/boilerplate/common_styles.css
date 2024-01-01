@@ -1,0 +1,115 @@
+
+    .heading {
+        font-family: 'Raleway';
+        font-weight: bold;
+        font-size: 3em;
+        font-weight: 900;
+    }
+
+    .centered {
+        position: fixed !important;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%) !important;
+        width: 100%;
+    }
+
+    .centered-left {
+        position: fixed !important;
+        top: 50%;
+        left: 0;
+        transform: translate(0%, -50%) !important;
+    }
+
+    .centered-right {
+        position: fixed !important;
+        top: 50%;
+        right: 0;
+        transform: translate(0%, -50%) !important;
+
+    }
+
+    .centered-top {
+        position: fixed !important;
+        top: 0;
+        left: 50%;
+        transform: translate(-50%, -50%) !important;
+        width: 100%;
+    }
+
+    .centered-bottom {
+        position: fixed !important;
+        bottom: 0;
+        left: 50%;
+        transform: translate(-50%, 0) !important;
+        width: 100%;
+    }
+
+    .top-left {
+        position: fixed !important;
+        top: 0;
+        left: 0;
+        transform: translate(0%, -50%) !important;
+
+    }
+
+    .top-right {
+        position: fixed !important;
+        top: 0;
+        right: 0;
+        transform: translate(0%, -50%) !important;
+
+    }
+
+    .bottom-left {
+        position: fixed !important;
+        bottom: 0;
+        left: 0;
+    }
+
+    .bottom-right {
+        position: fixed !important;
+        bottom: 0;
+        right: 0;
+    }
+
+
+    li {
+        padding: 0.5em 0 0.5em 0;
+    }
+
+    .reveal .slides .code-wrapper {
+        text-align: left !important;
+    }
+
+    .code-wrapper th, td {
+        border: 3px solid #666;
+        padding: 0.4em;
+    }
+
+    .va-markdown-html{
+        display: block;
+        font-family: sans-serif;
+        -webkit-font-smoothing: antialiased;
+        overflow: auto;
+        width: auto;
+    }
+
+    .va-markdown-html th {
+        background-color: rgb(53, 53, 53);
+        color: #b7b4b4;
+        font-weight: normal;
+        padding: 20px 30px;
+        text-align: center;
+        font-weight: bold;
+     }
+    .va-markdown-html  td {
+        background-color: rgb(193, 192, 192);
+        color: rgb(46,45,45);
+        padding: 20px 30px;
+        text-align: left;
+      }
+
+    #vara_container {
+        width: 100%;
+    }

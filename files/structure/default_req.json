@@ -1,0 +1,40 @@
+{
+    "background": {
+        "type": "video",
+        "value": "",
+        "keywords": [],
+        "source": "pexels",
+        "style": ""
+    },
+    "audio": {
+        "type": "",
+        "value": "",
+        "volume": 1,
+        "language": "auto",
+        "voice_id": "auto",
+        "speaking_rate": 0.8,
+        "delay": 10,
+        "provider": "google"
+    },
+    "overlay": [
+        {
+            "type": "image",
+            "value": "",
+            "position": "",
+            "style": "",
+            "delay": 10
+        }
+    ],
+    "template": {
+        "value": "simple",
+        "category": "simple"
+    },
+    "background_music": {
+        "value": "",
+        "volume": 1
+    },
+    "duration": {
+        "value": 5000,
+        "depends_on": "audio"
+    }
+}

@@ -1,0 +1,87 @@
+{
+    "default_elements": {
+        "template": {
+            "value": "intro-animation"
+        },
+        "background": {
+            "value": "",
+            "keywords": [
+                "database"
+            ],
+            "type": "video"
+        },
+        "overlay": {
+            "type": "image",
+            "value": "",
+            "position": "top-left",
+            "size": {
+                "width": "50px",
+                "height": "50px"
+            }
+        }
+    },
+    "global_elements": {
+        "music": {
+            "url": "http://someurl.com/audio.mp3",
+            "volume": 1.2
+        },
+        "audio": {
+            "value": "http://someurl.com/audio.mp3",
+            "type": "file"
+        }
+    },
+    "settings": {
+        "video": {
+            "resolution": {
+                "height": 1080,
+                "width": 1920
+            },
+            "fps": 60
+        },
+        "transition": {
+            "delay": 2
+        }
+    },
+    "slides": [
+        {
+            "template": {
+                "value": "bubble-animation",
+                "category": "intro"
+            },
+            "text": {
+                "type": "heading",
+                "value": "HEADING ONE",
+                "position": "top-bottom"
+            },
+            "background": {
+                "value": "",
+                "keywords": [
+                    "architecture",
+                    "buildings"
+                ],
+                "type": "video"
+            },
+            "audio": {
+                "value": "This is data for tts",
+                "type": "tts"
+            }
+        },
+        {
+            "text": {
+                "type": "heading",
+                "value": "HEADING 2",
+                "position": "top-left"
+            },
+            "background": {
+                "value": "",
+                "keywords": [
+                    "dull"
+                ],
+                "type": "video"
+            },
+            "duration": {
+                "value": 3
+            }
+        }
+    ]
+}

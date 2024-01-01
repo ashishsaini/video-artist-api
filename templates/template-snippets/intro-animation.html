@@ -1,0 +1,231 @@
+<!-- ##css_start## -->
+<script src="https://cdnjs.cloudflare.com/ajax/libs/animejs/2.0.2/anime.min.js"></script>
+<style>
+    @font-face {
+        font-family: 'Sucrose Bold Two';
+        src: url('https://s3-us-west-2.amazonaws.com/s.cdpn.io/4273/sucrose.woff2') format('woff2');
+    }
+
+    .intro-animation {
+        font-family: 'Sucrose Bold Two' !important;
+        font-weight: 600 !important;
+    }
+
+    .intro-animation {
+        position: relative;
+        font-weight: 900;
+        font-size: 4.5em;
+        width: 900px;
+    }
+
+    .intro-animation .letters {
+        position: absolute;
+        margin: auto;
+        bottom: 0.2em;
+        left: 0;
+        right: 0;
+        opacity: 0;
+    }
+</style>
+
+<!-- ##css_end## -->
+
+<!-- ##html_start## -->
+<section data-background-$$background_type$$="$$background$$" data-background-video-muted
+    data-background-video-loop="loop" data-paused-by-reveal="false" data-autoplay style=" height: 100%; width: 100%;"
+    data-autoanimate data-autoslide="1">
+    <div style="$$background_style$$; width: 110%; height: 110%; top: -5%; left:-5%; position: fixed;  ">
+    </div>
+    <div data-autoslide="1" class="fragment"></div>
+
+    __overlay_elements_html__
+
+    <div data-autoslide="$$slide_duration$$" class="fragment"></div>
+</section>
+<!-- ##html_end## -->
+
+
+<!-- ##js_start## -->
+<script>
+    let anime_timeline = anime.timeline({ loop: false });
+
+    intro_animation(is_first_call = true);
+
+    // these animations will run from second slide
+    Reveal.on('slidechanged', event => {
+        anime_timeline.restart();
+
+        // Animation 2
+        intro_animation();
+
+    });
+    function intro_animation(is_first_call = false) {
+
+        // first call to function
+        // replace the words to letters, this animation calls inndividual letters for animation
+        if (is_first_call == true) {
+            var ml4 = {};
+            ml4.opacityIn = [0, 1];
+            ml4.scaleIn = [0.2, 1];
+            ml4.scaleOut = 3;
+            ml4.durationIn = 300;
+            ml4.durationOut = 200;
+            ml4.delay = 100;
+
+            var looper = document.querySelectorAll('.intro-animation');
+            for (i = 0; i < looper.length; ++i) {
+                var textWrapper = looper[i];
+                console.log(looper[i].innerHTML);
+                
+                const words = looper[i].innerHTML.trim().split(' ');
+                looper[i].innerHTML = ""
+
+                console.log(words);
+                var cnt = 1;
+                words.forEach(word => {
+                    console.log(word);
+                    var letters_class = "letters-" + cnt;
+                    text_replace = "<span class='letters " + letters_class + "'>$&</span>";
+                    textWrapper.innerHTML += word.replace(word, text_replace);
+                    cnt++;
+                });
+
+                
+
+                for (j = 0; j < 11 - cnt; ++j) {
+                    var letters_class = "letters-" + (j + cnt);
+                    text_replace = "<span class='letters " + letters_class + "'></span>";
+                    textWrapper.innerHTML += text_replace;
+                }
+                console.log(textWrapper.innerHTML);
+
+            }
+        }
+        // call on first and every slide change
+        anime_timeline.add({
+            targets: '.intro-animation .letters-1',
+            opacity: ml4.opacityIn,
+            scale: ml4.scaleIn,
+            duration: ml4.durationIn,
+            delay: 500
+        }).add({
+            targets: '.intro-animation .letters-1',
+            opacity: 0,
+            scale: ml4.scaleOut,
+            duration: ml4.durationOut,
+            easing: "easeInExpo",
+            delay: ml4.delay
+        }).add({
+            targets: '.intro-animation .letters-2',
+            opacity: ml4.opacityIn,
+            scale: ml4.scaleIn,
+            duration: ml4.durationIn
+        }).add({
+            targets: '.intro-animation .letters-2',
+            opacity: 0,
+            scale: ml4.scaleOut,
+            duration: ml4.durationOut,
+            easing: "easeInExpo",
+            delay: ml4.delay
+        }).add({
+            targets: '.intro-animation .letters-3',
+            opacity: ml4.opacityIn,
+            scale: ml4.scaleIn,
+            duration: ml4.durationIn
+        }).add({
+            targets: '.intro-animation .letters-3',
+            opacity: 0,
+            scale: ml4.scaleOut,
+            duration: ml4.durationOut,
+            easing: "easeInExpo",
+            delay: ml4.delay
+        }).add({
+            targets: '.intro-animation .letters-4',
+            opacity: ml4.opacityIn,
+            scale: ml4.scaleIn,
+            duration: ml4.durationIn
+        }).add({
+            targets: '.intro-animation .letters-4',
+            opacity: 0,
+            scale: ml4.scaleOut,
+            duration: ml4.durationOut,
+            easing: "easeInExpo",
+            delay: ml4.delay
+        }).add({
+            targets: '.intro-animation .letters-5',
+            opacity: ml4.opacityIn,
+            scale: ml4.scaleIn,
+            duration: ml4.durationIn
+        }).add({
+            targets: '.intro-animation .letters-5',
+            opacity: 0,
+            scale: ml4.scaleOut,
+            duration: ml4.durationOut,
+            easing: "easeInExpo",
+            delay: ml4.delay
+        }).add({
+            targets: '.intro-animation .letters-6',
+            opacity: ml4.opacityIn,
+            scale: ml4.scaleIn,
+            duration: ml4.durationIn
+        }).add({
+            targets: '.intro-animation .letters-6',
+            opacity: 0,
+            scale: ml4.scaleOut,
+            duration: ml4.durationOut,
+            easing: "easeInExpo",
+            delay: ml4.delay
+        }).add({
+            targets: '.intro-animation .letters-7',
+            opacity: ml4.opacityIn,
+            scale: ml4.scaleIn,
+            duration: ml4.durationIn
+        }).add({
+            targets: '.intro-animation .letters-7',
+            opacity: 0,
+            scale: ml4.scaleOut,
+            duration: ml4.durationOut,
+            easing: "easeInExpo",
+            delay: ml4.delay
+        }).add({
+            targets: '.intro-animation .letters-8',
+            opacity: ml4.opacityIn,
+            scale: ml4.scaleIn,
+            duration: ml4.durationIn
+        }).add({
+            targets: '.intro-animation .letters-8',
+            opacity: 0,
+            scale: ml4.scaleOut,
+            duration: ml4.durationOut,
+            easing: "easeInExpo",
+            delay: ml4.delay
+        }).add({
+            targets: '.intro-animation .letters-9',
+            opacity: ml4.opacityIn,
+            scale: ml4.scaleIn,
+            duration: ml4.durationIn
+        }).add({
+            targets: '.intro-animation .letters-9',
+            opacity: 0,
+            scale: ml4.scaleOut,
+            duration: ml4.durationOut,
+            easing: "easeInExpo",
+            delay: ml4.delay
+        }).add({
+            targets: '.intro-animation .letters-10',
+            opacity: ml4.opacityIn,
+            scale: ml4.scaleIn,
+            duration: ml4.durationIn
+        }).add({
+            targets: '.intro-animation .letters-10',
+            opacity: 0,
+            scale: ml4.scaleOut,
+            duration: ml4.durationOut,
+            easing: "easeInExpo",
+            delay: ml4.delay
+        });
+
+    }
+
+</script>
+<!-- ##js_end## -->

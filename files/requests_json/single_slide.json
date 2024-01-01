@@ -1,0 +1,38 @@
+{
+    "settings": {
+        "video": {
+            "resolution": {
+                "height": 1080,
+                "width": 1920
+            },
+            "fps": 30
+        },
+        "transition": {
+            "delay": 2
+        }
+    },
+    "slides": [
+        {
+            "template": "intro-1",
+            "text": {
+                "type": "heading",
+                "value": "HEADING 1",
+                "position": "top-left"
+            },
+            "background": {
+                "value": "",
+                "keywords": [
+                    "architecture",
+                    "buildings"
+                ],
+                "type": "video",
+                "source": "pexels"
+            },
+            "tts": {
+                "value": "this is tts audio",
+                "voice": "female 1",
+                "volume": 1.2
+            }
+        }
+    ]
+}

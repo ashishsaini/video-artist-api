@@ -1,0 +1,16 @@
+{
+    "static":{
+        "$$resolution_width$$": {
+            "mapping": "settings.video.resolution.width"
+        },
+        "$$resolution_height$$": {
+            "mapping": "settings.video.resolution.height"
+        },
+        "$$transition_delay$$": {
+            "mapping": "settings.transition.delay"
+        },
+        "$$audio_file$$": {
+            "mapping": "global_elements.audio.value"
+        }
+    }
+}

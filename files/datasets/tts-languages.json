@@ -1,0 +1,20 @@
+{
+    "hi": {
+        "name": "Hindi",
+        "language_code": "hi-IN",
+        "voice_id": "hi-IN-SwaraNeural",
+        "provider": "microsoft"
+    },
+    "en": {
+        "name": "English",
+        "language_code": "en-US",
+        "voice_id": "en-US-GuyNeural",
+        "provider": "microsoft"
+    },
+    "ja": {
+        "name": "Japanese",
+        "language_code": "ja-JP",
+        "voice_id": "ja-JP-NanamiNeural",
+        "provider": "microsoft"
+    }
+}
