@@ -1,6 +1,12 @@
-## Video middleware
+## Video Artist
 
-#### It creates the html from the content provided in the API and returns the Url of the html 
+#### Smart and simple API for generating automated videos
+
+Video Artist is an API platform that uses AI to create the video according to content provided by the user. Video artist can be used by developers to create applications for many purposes like news, articles to videos, how-to videos, product videos (and many more) for platforms like youtube, linkedin, instagram, tiktok etc. 
+
+
+![video-artist-recording](https://github.com/ashishsaini/video-artist-api/assets/5359237/ef3bba3c-6502-4dae-8a16-10b8c58573b9)
+
 
 #### Setup enviroment variables in .env file
 
