@@ -9,8 +9,6 @@ RUN pip install git+https://github.com/LIAAD/yake
 
 WORKDIR /app
 
-RUN mkdir -p /app/data
-
 COPY requirements.txt requirements.txt
 
 RUN pip install -r requirements.txt

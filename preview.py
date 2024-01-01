@@ -40,6 +40,8 @@ class Preview:
 
         SERVER_ADDRESS, SERVER_PORT = utils.get_server_details()
         self.SERVER_ADD = f"http://{SERVER_ADDRESS}:{SERVER_PORT}/"
+        
+        utils.create_dirs()
 
     def process(self):
         ''' 

@@ -1,4 +1,5 @@
 # VIDEO ARTIST
+Note: this doc is work in progress, some things mentioned are old and may not work properly.  
 
 ## Create video from Anything
 
@@ -27,25 +28,6 @@ See the result of the above json in below video:
 
 ### todo video of above content
 
-Or you can use the python sdk to make things easy.
-
-```python
-from video_artist import VideoArtist
-
-# middleware IP, middleware port, Video server IP, video server port
-va = VideoArtist("x.x.x.x", "xx", "x.x.x.x", "xx")
-
-va.filename = "video.mp4" # required
-va.resolution = {"width": 1080, "height": 1920}
-va.fps = 30
-
-# va.add_slide("{keyword for background}", "{text heading}", "{TTS audio}")
-va.add_slide("Iphone","Heading of slide 1", "TTS to be played during slide 1")
-va.add_slide("macbook","Heading of slide 2", "TTS to be played during slide 2")
-
-# video will be downloaded in provided dir
-va.make_video("downloads/")
-```
 
 Off course, this is just a demo, video artist provides absolute control over your videos, following are some options:
 
@@ -66,7 +48,6 @@ Off course, this is just a demo, video artist provides absolute control over you
 * Choose from animated design templates and background music available by default. 
 
   
-
 ## Core Components
 
 Video artist uses elements like text, background, TTS etc. Video artist tries to combine the elements passed in API in a smartest possible way to create best possible video. 

@@ -353,3 +353,9 @@ def is_record_video(request):
         if "record_video" in request["settings"] and request["settings"]["record_video"] == True:
             return True
     return False
+
+def create_dirs():
+    dirs = ["data/path/media_cache"]
+    wlog("Creating dirs")
+    for i in dirs:
+        os.system(f"mkdir -p {i}")

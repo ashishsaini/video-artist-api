@@ -53,7 +53,7 @@ class VideoDownloader:
     def _check_and_create_dir(self, dir):
         if not os.path.exists(dir):
             try:
-                os.mkdir(dir)
+                os.makedirs(dir)
             except Exception as e:
                 logging.warning(
                     f"Unable to create required downloads directory: {dir}")

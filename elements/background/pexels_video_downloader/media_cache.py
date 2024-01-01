@@ -16,7 +16,7 @@ class MediaCache:
     def _check_and_create_dir(self, dir):
         if not os.path.exists(dir):
             try:
-                os.mkdir(dir)
+                os.makedirs(dir)
             except Exception as e:
                 print(f"Unable to create required downloads directory: {dir}")
                 print(f"{e}")

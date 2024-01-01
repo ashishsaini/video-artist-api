@@ -1,0 +1,7 @@
+py3/
+data/
+.env
+__pycache__/
+creds/
+.DS_Store
+*.pyc
