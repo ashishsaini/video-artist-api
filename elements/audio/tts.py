@@ -9,6 +9,7 @@ import shutil
 from uuid import uuid4
 from .google_tts import GoogleTTS
 from .microsoft_tts import MicrosoftTTS
+from .emotivoice import EmotiVoice
 from .ai import language
 
 class TTS():
@@ -26,6 +27,7 @@ class TTS():
         self.config_tts = {}
         self.google_tts = GoogleTTS()
         self.microsoft_tts = MicrosoftTTS()
+        self.emoti_tts = EmotiVoice()
         self.language_ai = language.Language()
 
         SERVER_ADDRESS, SERVER_PORT = utils.get_server_details()
@@ -168,6 +170,9 @@ class TTS():
                 text, config_tts, audio_file, diff_duration)
         elif config_tts['provider'] == "microsoft":
             return self.microsoft_tts.create(
+                text, config_tts, audio_file, diff_duration)
+        elif config_tts['provider'] == "emotivoice":
+            return self.emoti_tts.create(
                 text, config_tts, audio_file, diff_duration)
         else:
             utils.return_response({
@@ -378,7 +383,7 @@ class TTS():
         return True
 
     def _validate_provider(self, provider):
-        if not provider or provider not in ["google", "microsoft", "auto"]:
+        if not provider or provider not in ["google", "microsoft", "auto", "emotivoice"]:
             utils.return_response(
                 {"status": "error", "message": f"provider is invalid : {provider}"})
         return True

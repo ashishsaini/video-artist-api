@@ -1,5 +1,5 @@
 py3/
-data/
+data/*
 .env
 __pycache__/
 creds/
